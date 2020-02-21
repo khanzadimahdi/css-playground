@@ -1,0 +1,57 @@
+
+@charset 'utf8';
+
+/**
+    Description:
+        Class and id selectors define rules that apply to only a selected set of
+        HTML elements. They allow you to identify individual elements, or groups
+        of elements, without having to style all instances of the element type.
+
+        In many instances, using classes is the preferred method of selecting
+        elements in CSS because classes are both flexible and reusable. Ids, on
+        the other hand, are often used for structural elements of a site, such as
+        #content and #footer, to highlight that those elements serve a unique role.
+**/
+
+
+/* Selects any element with class name myclass */
+.myclass {}
+
+/* Selects any <p> element with class name myclass */
+p.myclass {}
+
+
+
+
+
+
+html, body {
+    height: 100%;
+}
+
+.text-center {
+    text-align:center;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 80%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+article.text-capitalize::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#app--header, #app-footer {
+    color: #f90;
+}
+
+#app--footer {
+    background-color: #EEE;
+}

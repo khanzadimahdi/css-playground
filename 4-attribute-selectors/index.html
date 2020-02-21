@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>attribute selectors</title>
+        <style type="text/css">
+            
+            /** attribute selector **/
+            input[type] {
+                padding: 5px 7px;
+            }
+
+            /** attribute value selector **/
+            [type="submit"] {
+                background-color: #f90;
+                border: none;
+                padding: 5px;
+                color: white;
+            }
+
+            form [value="hello"] {
+                color: #0F0;
+            }
+
+            input[value="hello"] {
+                background-color: #efefef;
+            }
+
+            /** language attribute selector **/
+            html[lang|="en"] {
+                background: #eee;
+            }
+
+            /** delimited value selector **/
+            input[value~="my"] {
+                background-color: yellow;
+            }
+
+            /** value substring selector **/
+            p[title*="ip"] {
+                color: red;
+            }
+
+            /** value start selector **/
+            p[title^="lor"]::first-letter {
+                color: #f90;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
+            /** value end selector **/
+            p[title$="sum"]::first-line {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input name="title" type="text">
+            <input value="hello" type="text">
+            <input value="hello my world" type="text">
+            <button type="submit">submit</button>
+            <p title="lorem ipsum">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Animi consequatur ratione corrupti eos magni!
+                Suscipit numquam eaque dolorem iusto unde illo tenetur,
+                possimus dolorum eveniet! Natus distinctio aliquid velit reiciendis.
+            </p>
+        </form>
+    </body>
+</html>

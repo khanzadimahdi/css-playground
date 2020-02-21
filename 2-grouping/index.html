@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /*** ungrouped rules ***/
+            h1 {
+                color: red;
+            }
+
+            h1 {
+                background-color: #000;
+            }
+
+            p {
+                color: red;
+            }
+
+            p {
+                background-color: #000;
+            }
+
+
+            /*** grouped selectors ***/
+            h1, p {
+                color: red;
+            }
+
+            h1, p {
+                background-color: #000;
+            }
+
+
+            /*** grouped declarations ***/
+            h1 {
+                color: red;
+                background-color: #000;
+            }
+
+            p {
+                color: red;
+                background-color: #000;
+            }
+
+
+            /*** grouped selectors and declarations ***/
+            h1, p {
+                color: red;
+                background-color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>this is a heading</h1>
+        <p>this is a paragraph</p>        
+    </body>
+</html>

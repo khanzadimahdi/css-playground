@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>structural seudo-clases</title>
+        <style>
+            /**
+                Description:
+                    The structural pseudo-classes target elements based on
+                    their relation with other elements.
+
+                    The :nth-child(an + b) pseudo-class matches every b child element
+                    after the children have been divided into groups of a elements.
+
+                    The counter may be negative, in which case the iteration occurs backwards.
+                    the n starts from 0 to infinite positive.
+
+                    -n + 3 => 1 2 3
+
+                    The :empty pseudo-class matches selected elements that do not have any content.
+
+                    The :root pseudo-class matches the topmost element in the document
+                    tree. In HTML documents, this is always the <html> element.
+
+                    This pseudo-class is mainly useful when CSS is used with other
+                    languages, such as XML, in which the root element can vary.
+            **/
+
+            /* first paragraph */
+            p:first-child {
+                color: yellow;
+            }
+
+            /* first paragraph child */
+            p :first-child {
+                color: red;
+            }
+
+            /* last paragraph */
+            p:last-child {
+                color: green;
+            }
+
+            /* last paragraph child */
+            p :last-child {
+                color: blue;
+            }
+
+            /* paragraph without siblings */
+            p:only-child {
+                color: orange;
+            }
+
+            /* children without siblings */
+            p :only-child {
+                color: navy;
+            }
+
+            /* only <p> element */
+            p:only-of-type {
+                text-shadow: 0 0 3px red;
+            }
+
+            p :only-of-type {
+                text-shadow: 0 0 3px green;
+            }
+
+            /* first paragraph */
+            p:first-of-type {
+
+            }
+
+            /* paragraph first child of any type */
+            p :first-of-type {
+
+            }
+
+            /* last paragraph */
+            p:last-of-type {
+
+            }
+
+            /* last child of any type */
+            p :last-of-type {
+
+            }
+
+            /* first child */
+            p :nth-child(1)    {}
+
+            /* even children */
+            p :nth-child(2n)   {}
+
+            /* odd children */
+            p :nth-child(2n+1) {}
+
+            /* first paragraph */
+            p :nth-child(1)    {}
+            
+            /* even paragraphs */
+            p :nth-child(2n)   {}
+
+            /* odd paragraphs */
+            p :nth-child(2n+1) {}
+
+            /* even table rows */
+            tr:nth-child(even) {}
+
+            /* odd table rows */
+            tr:nth-child(odd)  {}
+
+            section :nth-child(1) {
+                background-color: red;
+            }
+
+            /* first three children */            
+            p:nth-child(-n+3) {}
+
+            p:nth-of-type(1) {}
+
+            p :nth-of-type(1) {}
+
+            /* third last paragraph */
+            p:nth-last-of-type(3)    {}
+
+            /* last two paragraphs */
+            p:nth-last-of-type(-n+2) {}
+
+            /* third last child */
+            p :nth-last-child(3) {}
+
+            /* last two children */
+            p :nth-last-child(-n+2) {}
+            
+        </style>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis possimus deserunt exercitationem quod impedit aperiam sit modi illo perspiciatis repellendus! At voluptatum possimus, animi temporibus veniam mollitia dolorum perspiciatis quidem.</p>
+        <p>
+            <span>First child</span>
+            <span>Text</span>
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam sit accusamus. Similique iure voluptatibus beatae totam, atque quo magni, aliquam, odit eum et quam hic voluptatem illo magnam aspernatur.</p>
+        <div>
+            <p>only child orange - shadow red</p>
+        </div>
+        <p>
+            <span>only child navy - shadow green</span>
+        </p>
+
+        <section>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo soluta dicta minus blanditiis nisi nihil, praesentium error illum a quis provident modi quae necessitatibus, possimus accusantium porro recusandae voluptate expedita.</p>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>seudo elements</title>
+        <style>
+            /**
+                description:
+                    Pseudo-elements enable parts of an element to be styled. Only one of
+                    these can be applied to any one selector.
+
+                    CSS 3 introduced the double-­colon (::) notation to differentiate pseudo-elements from pseudo-classes.
+                    W3C has deprecated use of the single colon notation, but all major
+                    browsers continue to support both syntaxes. Inclusion of the single colon
+                    notation would be appropriate only if support for the legacy browser IE8 is
+                    desired.
+
+                list of seudo elements:
+                -> ::first-letter
+                -> ::first-line
+                -> ::before
+                -> ::after
+                -> ::selection
+
+                Notice:
+                    -> ::first-letter and ::first-line work only on block elements such as paragraphs.
+
+                    -> ::before, ::after ==> The "content" property is special in that it can be used
+                    only together with these two pseudo-elements.
+
+                    -> ::selection valid styling properties for most browsers
+                    are limited to color and background-color.
+            **/
+
+            p::first-letter {
+                color: red;
+            }
+
+            p::first-line {
+                color: green;
+            }
+
+            h1::before {
+                content: 'css_before';
+                color:yellow;
+            }
+
+            h1::after {
+                content: 'css_after';
+                color:yellow;
+            }
+
+            ::selection {
+                color: #F90;
+                background-color: gray;
+            }
+            div#content {
+                content: 'mahdi';
+            }
+        </style>
+    </head>
+    <body>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi itaque, non suscipit perferendis quis, veniam nihil qui consequuntur facilis, mollitia laborum possimus ipsa impedit illum corporis quidem consequatur quam amet.</p>
+        <div>
+            HTML_Before--<h1>HTML_Middle</h1>--HTML_After
+        </div>
+        <div id="content"></div>
+    </body>
+</html>

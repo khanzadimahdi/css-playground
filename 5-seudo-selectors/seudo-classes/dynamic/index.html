@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dynamic seudo-classes</title>
+        <style>
+            /**
+                Description:
+                    The dynamic category of pseudo-classes is used to apply styles
+                    to links or other interactive elements when their state is changed.
+                    there are five of them, all of which were introduced in CSS 2.
+
+                    The dynamic pseudo-classes :link and :visited can be applied only to
+                    the anchor element (<a>).
+
+                    The :link pseudo-class matches links to pages that have not been viewed,
+                    whereas :visited matches links that have been viewed.
+
+                    The difference between :active and :focus is that :active lasts only for
+                    the duration of the click, whereas :focus lasts until the element loses focus.
+            **/
+
+            /* unvisited link */
+            a:link {
+                color: green;
+            }
+
+            /* visited link */
+            a:visited {
+                color: green;
+            }
+
+            /* mouse over link */
+            a:hover {
+                color: red;
+            }
+
+            /* selected link */
+            a:active {
+                color: yellow;
+            }
+
+            /* focused link */
+            a:focus {
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">Lorem ipsum dolor sit amet consectetur</a>
+    </body>
+</html>

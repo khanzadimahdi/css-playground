@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>relationship selectors</title>
+        <style>
+            /**
+                Description:
+                    Relationship selectors match elements based on their relation with other
+                    elements.To understand these selectors, it is important to recognize how
+                    elements in a web document are related to each other.
+
+                    -> Inheritance:
+                        Inheritance is another important concept in CSS. It makes certain styles
+                        apply not only to the specified element but also to all its descendant
+                        elements.
+                        Any property can explicitly be given the value inherit to use the same
+                        value as the one the parent element has for that property.
+
+                    -> Adjacent: (+)
+                        The adjacent sibling selector selects the second element if it comes directly
+                        after the first element.
+
+                    -> Descendent:
+                        The descendent selector matches an element if it is the child or grandchild
+                        of another element. It is useful when you want to apply a style to an
+                        element only when it resides within another element.
+
+                    -> Direct Child Selector: (>)
+                        The direct child selector matches its second element if it is the immediate
+                        descendant of its first element.
+
+                    -> General Sibling Selector: (~)
+            **/
+
+            p {
+                color: inherit;
+            }
+
+            p + a {}
+
+            p a {}
+
+            p > a {}
+
+            p ~ a {}
+        </style>
+    </head>
+    <body>
+
+    </body>
+</html>

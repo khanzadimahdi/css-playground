@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>background</title>
+    <style media="screen">
+      div {
+        width: 250px;
+        height: 250px;
+        color: #FFF;
+        font-size: 2em;
+        border: 15px solid rgba(0,0,0,0.5);
+        padding: 15px;
+        margin: 15px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      div:nth-of-type(1) {
+        background: url(images/baby.jpg) no-repeat border-box padding-box;
+      }
+
+      div:nth-of-type(2) {
+        background: url(images/baby.jpg) no-repeat border-box border-box;
+      }
+
+      div:nth-of-type(3) {
+        background: url(images/baby.jpg) no-repeat padding-box border-box;
+      }
+
+      div:hover {
+        background-origin: border-box;
+        background-clip: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div>clip: border-box, origin: padding-box</div>
+    <div>clip: border-box, origin: border-box</div>
+    <div>clip: padding-box, origin: border-box</div>
+  </body>
+</html>

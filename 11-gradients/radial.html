@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>radial gradients</title>
+    <style media="screen">
+      div {
+        padding: 100px 150px;
+        border: 5px double red;
+        margin: 10px;
+        color: #F00;
+        font-size: 2em;
+        font-weight: bold;
+        display: inline-block;
+      }
+
+      div:nth-child(1) {
+        background-image: radial-gradient(gray, black);
+      }
+
+      div:nth-child(2) {
+        background-image: radial-gradient(black 25%, white, black 75%);
+      }
+
+      div:nth-child(3) {
+        background-image: radial-gradient(circle, black 25%, white, black 75%);
+      }
+
+      div:nth-child(4) {
+        background-image: radial-gradient(75% 25%, black 25%, white, black 75%);
+      }
+
+      div:nth-child(5) {
+        background-image: repeating-radial-gradient(circle at right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5) 5%, rgba(255,255,255,0.5) 5%, rgba(255,255,255,0.5) 10%),
+                          repeating-radial-gradient(circle at right top, rgba(0,0,0,0.5), rgba(0,0,0,0.5) 5%, rgba(255,255,255,0.5) 5%, rgba(255,255,255,0.5) 10%),
+                          repeating-radial-gradient(circle at left bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5) 5%, rgba(255,255,255,0.5) 5%, rgba(255,255,255,0.5) 10%),
+                          repeating-radial-gradient(circle at left top, rgba(0,0,0,0.5), rgba(0,0,0,0.5) 5%, rgba(255,255,255,0.5) 5%, rgba(255,255,255,0.5) 10%);
+        background-size: 50px 50px;
+      }
+
+      div:nth-child(6) {
+        background:
+          radial-gradient(circle at 100% 50%, transparent 20%, #00D4F0 21%,#00D4F0 34%, transparent 35%, transparent),
+          radial-gradient(circle at 0% 50%, transparent 20%, #00D4F0 21%, #00D4F0 34%, transparent 35%, transparent) 0 -50px;
+        background-color: #EEEEEE;
+        background-size: 75px 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </body>
+</html>
